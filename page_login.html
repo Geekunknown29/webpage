@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cisco Community</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            background-color: #2d9eeada;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background: url('https://wallpaperaccess.com/full/1567679.jpg')center fixed;
+            background-size: cover;
+            background-color: #4399f41f;
+        }
+        header {
+            background-color: #c5f5f175;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(167, 168, 168, 0.349);
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-family: serif, Courier, monospace;
+            font-size: 2em;
+        }
+        hr {
+            margin: 20px auto;
+            width: 80%;
+        }
+        footer {
+            background-color: rgba(192, 241, 243, 0.268);
+            padding: 10px;
+            margin-top: 20px;
+        }
+        form {
+            margin: 20px 0;
+        }
+        input {
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+    </style>
+<script>
+    function validateForm() {
+                const email = document.querySelector('input[type="email"]').value;
+                const mobile = document.querySelector('input[type="tel"]').value;
+                const password = document.querySelector('input[type="password"]').value;
+    
+                if (!email || !mobile || !password) {
+                    alert("Please fill out all fields.");
+                    return false;
+                }
+    
+                const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+                if (!email.match(emailPattern)) {
+                    alert("Please enter a valid email address.");
+                    return false;
+                }
+    
+                const mobilePattern = /^\d{10}$/;
+                if (!mobile.match(mobilePattern)) {
+                    alert("Please enter a valid 10-digit mobile number.");
+                    return false;
+                }
+    
+                return true;
+            }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Cisco Community</h1>
+        <h3>VIT Bhopal</h3>
+        <hr>
+        <p>Get ready for the amazing journey you are about to join!!!</p>
+        <span>Sign up:</span>
+    </header>
+
+    <form onsubmit="return validateForm()", style = "background-color: rgba(128, 203, 238, 0.541);">
+        
+        <div>
+
+            <span>E-Mail : <input type = "email", placeholder = "enter your mail id"> </span> 
+        </div>
+        <br>
+        <div> 
+            <span>Mobile No.: <input type="tel" pattern="[0-9]{10}" placeholder="Enter your mobile no." required> </span> 
+        </div>
+        
+        <br>
+        <div> 
+            <span>password : <input type = "password", placeholder = "enter your password"> </span> 
+        </div>
+        <br>
+        <br>
+        <div> 
+             <span> Click on Submit : <input type = 'SUBMIT', placeholder = "SUBMIT"> </span>
+        </div>
+    </form>
+
+    <div style="background: rgba(128, 204, 246, 0.238)">
+        <img src="https://th.bing.com/th/id/R.5c6a253120e2aa59348ce3d2e81fe1f1?rik=WD3WorU7XPvM2g&riu=http%3a%2f%2f1000logos.net%2fwp-content%2fuploads%2f2016%2f11%2fcisco-emblem.jpg&ehk=3ELjsUDwa2jqhXImFAIioBkT1NF%2biJ2WzZfgYEHVutA%3d&risl=&pid=ImgRaw&r=0" height="100" alt="Image not loaded">
+        <br><br>
+        <img src="https://www.campusoption.com/images/colleges/logos/25_07_17_052419_vit-bhopal.jpg" height="120px" width="200px" alt="Image can't be loaded">
+    </div>
+
+    <footer>
+        <p>If you have already registered yourself, then:</p>
+        <p>Just click below:</p>
+        <a href="page_signup.html"><button class="submit-btn">Already a member?</button></a>
+    </footer>
+</body>
+</html>
